@@ -1,0 +1,179 @@
+body {
+    font-size: 14px;
+}
+/* Theme color settings */
+.text-theme {
+	color:#4e73df !important;
+}
+.bg-theme {
+	background:#4e73df !important;
+}
+.bg-dark-theme {
+	background:#222d32 !important;
+}
+.btn-theme {
+	color:#EEE !important;
+	background:#4e73df !important;
+}
+.list-group-theme .list-group-item {
+	background:#4e73df;
+	padding:0.25rem 1.25rem;
+}
+.list-group-theme .list-group-item a {
+	color:#b8c7ce;
+}
+.navbar-theme {
+	background:#4e73df;
+	-webkit-box-shadow: 0 3px 3px -3px #222;
+	-moz-box-shadow: 0 3px 3px -3px #222;
+	box-shadow: 0 3px 3px -3px #222;
+}
+.box-theme, .transition {
+	transition: 0.3s;
+}
+.box-theme:hover {
+	box-shadow:0 0 2px #888;
+	opacity:0.8;
+	margin:-2px;
+}
+.text-theme-inverse {
+	color:#b8c7ce;
+}
+.bg-theme-inverse {
+	background:#4e73df;
+}
+.btn-theme-inverse {
+	color:#b8c7ce;
+	background:#4e73df;
+}
+.flex-end {
+	justify-content:flex-end;
+}
+.text-small {
+	font-size:8px;
+}
+/* Dashboard menu */
+.list-group-transparent .list-group-item {
+	background:#343a40;
+	padding:0.25rem 1.25rem;
+}
+.list-group-transparent .list-group-item a {
+	color:#b8c7ce;
+}
+/*Collapse icon */
+[data-toggle="collapse"] .fa.collapse-icon:before {   
+	content: "\f0da";
+	position:absolute;
+	right:5px;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+[data-toggle="collapse"].active:not(.collapsed) .fa.collapse-icon:before, [data-toggle="collapse"][aria-expanded="true"] .fa.collapse-icon:before {   
+	content: "\f0d7";
+	position:absolute;
+	right:5px;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+/* Transition */
+.hover-move {
+	transition: 0.3s;
+	box-sizing:border-box;
+}
+.nav-link:hover .hover-move, .list-group-item:hover .hover-move {
+	margin-left:5px;
+}
+/*View port height matching*/
+.vp-h-55-md { /*height minus 55px;*/
+	overflow-y:scroll;
+}
+/* Breadcum style */
+.p-r {
+	position:relative;
+}
+/* Responsive table with sorting */
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+	bottom: .5em;
+}
+/* Admin LTE edit */
+.content-header {
+	padding: 15px 0;
+}
+.content-header small {
+	font-size:15px;
+	color:#888;
+}
+/* custom css */
+.height-middle {
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+.position-center {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.size-21 {
+	position: relative;
+    width: 100%; /* The size you want */
+}
+.size-21:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%; /* The padding depends on the width, not on the height, so with a padding-bottom of 100% you will get a square */
+}
+.size-21 img {
+    position: absolute; /* Take your picture out of the flow */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; /* Make the picture taking the size of it's parent */
+    width: 100%; /* This if for the object-fit */
+    height: 100%; /* This if for the object-fit */
+    object-fit: cover; /* Equivalent of the background-size: cover; of a background-image */
+    object-position: center;
+}
+.owl-heading {
+    height:30px;
+    overflow:hidden;
+    text-align:center;
+    display:block;
+}
+.owl-paragraph {
+    height:55px;
+    padding:5px;
+    overflow:hidden;
+    text-align:justify;
+    display:block;
+}
+/* custom css ends */
+/* Adminlte b-3 update */
+.nav-theme>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+/* Bootstrap extension */
+.display-5 {
+	font-size: 1.2rem;
+}
+/*Bootstrap-datepicker plugin */
+.datepicker {
+	box-shadow:0 0 5px #DDD;
+}
+/*Custom CSS */
+.display-5 {
+    font-size:2.2rem;
+}

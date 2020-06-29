@@ -1,6 +1,6 @@
 @extends('layouts.common')
 @section('title')
-{{ __('E-commerce templates') }}
+{{ __($product->name) }}
 @endsection
 @section('content')
 <div class="container-fluid @computer py-5 @endcomputer" id="product">
@@ -47,7 +47,7 @@
                     <p class="display-5 text-primary">৳{{ $product->msrp ?? 0 }} per kg</p>
                 </div>
                 <hr class="w-100">
-                <div class="col-12"><span class="text-danger">Minimum Amount: 12kg</span></div>
+                <div class="col-12"><span class="text-danger">Minimum Order: 12kg</span></div>
                 <div class="col-12">
                     <div class="btn-group">
                         <div class="input-group my-2">

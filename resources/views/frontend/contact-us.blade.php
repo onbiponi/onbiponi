@@ -1,6 +1,6 @@
 @extends('layouts.common')
 @section('title')
-{{ __('E-commerce templates') }}
+{{ __('Best Mangoes in Bangladesh') }}
 @endsection
 @section('content')
 <div class="content py-5  bg-light">

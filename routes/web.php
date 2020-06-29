@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'Frontend\HomeController@index')->name('index');
+
 Route::get('/home', 'Frontend\HomeController@index')->name('home');
 
 Auth::routes(['verify' => true]);
@@ -62,9 +63,8 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 Route::resource('products', 'Backend\ProductController')->only(['index', 'show']);
 Route::post('subscriptions', 'Backend\ContactUsController@subscribe')->name('subscriptions.store');
 Route::get('sitemap.xml', function() {
-
 	\Spatie\Sitemap\SitemapGenerator::create('https://onbiponi.com')->writeToFile('sitemap.xml');
-	});
+});
 Route::get('/clear-cache', function() {
 		Artisan::call('cache:clear');
 		Artisan::call('view:clear');

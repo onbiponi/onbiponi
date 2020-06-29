@@ -1,6 +1,6 @@
 @extends('layouts.common')
 @section('title')
-{{ __('E-commerce templates') }}
+{{ __('Best Mangoes in Bangladesh') }}
 @endsection
 @section('content')
 <div class="container-fluid @computer py-5 @endcomputer">

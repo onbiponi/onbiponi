@@ -7,6 +7,7 @@ namespace Composer\Autoload;
 class ComposerStaticInit78023d5add38e3d4779603866b840886
 {
     public static $files = array (
+        '21826e6172797a4a1af6b1ba3178c61d' => __DIR__ . '/..' . '/codezero/laravel-localized-routes/src/helpers.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
@@ -162,6 +163,10 @@ class ComposerStaticInit78023d5add38e3d4779603866b840886
         'C' => 
         array (
             'Cron\\' => 5,
+            'ComposerIncludeFiles\\' => 21,
+            'CodeZero\\Localizer\\' => 19,
+            'CodeZero\\LocalizedRoutes\\' => 25,
+            'CodeZero\\BrowserLocale\\' => 23,
             'Carbon\\' => 7,
         ),
         'B' => 
@@ -477,6 +482,22 @@ class ComposerStaticInit78023d5add38e3d4779603866b840886
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
+        'ComposerIncludeFiles\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/0.0.0/composer-include-files/src',
+        ),
+        'CodeZero\\Localizer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/codezero/laravel-localizer/src',
+        ),
+        'CodeZero\\LocalizedRoutes\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/codezero/laravel-localized-routes/src',
+        ),
+        'CodeZero\\BrowserLocale\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/codezero/browser-locale/src',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
@@ -576,6 +597,7 @@ class ComposerStaticInit78023d5add38e3d4779603866b840886
         'App\\Http\\Middleware\\Moderator' => __DIR__ . '/../..' . '/app/Http/Middleware/Moderator.php',
         'App\\Http\\Middleware\\ModeratorOrOwner' => __DIR__ . '/../..' . '/app/Http/Middleware/ModeratorOrOwner.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
+        'App\\Http\\Middleware\\SetLanguage' => __DIR__ . '/../..' . '/app/Http/Middleware/SetLanguage.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\User' => __DIR__ . '/../..' . '/app/Http/Middleware/User.php',
@@ -663,6 +685,42 @@ class ComposerStaticInit78023d5add38e3d4779603866b840886
         'Carbon\\Traits\\Units' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Units.php',
         'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'CodeZero\\BrowserLocale\\BrowserLocale' => __DIR__ . '/..' . '/codezero/browser-locale/src/BrowserLocale.php',
+        'CodeZero\\BrowserLocale\\Filters\\CombinedFilter' => __DIR__ . '/..' . '/codezero/browser-locale/src/Filters/CombinedFilter.php',
+        'CodeZero\\BrowserLocale\\Filters\\CountryFilter' => __DIR__ . '/..' . '/codezero/browser-locale/src/Filters/CountryFilter.php',
+        'CodeZero\\BrowserLocale\\Filters\\Filter' => __DIR__ . '/..' . '/codezero/browser-locale/src/Filters/Filter.php',
+        'CodeZero\\BrowserLocale\\Filters\\LanguageFilter' => __DIR__ . '/..' . '/codezero/browser-locale/src/Filters/LanguageFilter.php',
+        'CodeZero\\BrowserLocale\\Filters\\LocaleFilter' => __DIR__ . '/..' . '/codezero/browser-locale/src/Filters/LocaleFilter.php',
+        'CodeZero\\BrowserLocale\\Filters\\PropertyFilter' => __DIR__ . '/..' . '/codezero/browser-locale/src/Filters/PropertyFilter.php',
+        'CodeZero\\BrowserLocale\\Filters\\WeightFilter' => __DIR__ . '/..' . '/codezero/browser-locale/src/Filters/WeightFilter.php',
+        'CodeZero\\BrowserLocale\\Laravel\\BrowserLocaleServiceProvider' => __DIR__ . '/..' . '/codezero/browser-locale/src/Laravel/BrowserLocaleServiceProvider.php',
+        'CodeZero\\BrowserLocale\\Locale' => __DIR__ . '/..' . '/codezero/browser-locale/src/Locale.php',
+        'CodeZero\\LocalizedRoutes\\LocaleHandler' => __DIR__ . '/..' . '/codezero/laravel-localized-routes/src/LocaleHandler.php',
+        'CodeZero\\LocalizedRoutes\\LocalizedRoutesServiceProvider' => __DIR__ . '/..' . '/codezero/laravel-localized-routes/src/LocalizedRoutesServiceProvider.php',
+        'CodeZero\\LocalizedRoutes\\LocalizedUrlGenerator' => __DIR__ . '/..' . '/codezero/laravel-localized-routes/src/LocalizedUrlGenerator.php',
+        'CodeZero\\LocalizedRoutes\\Macros\\IsLocalizedMacro' => __DIR__ . '/..' . '/codezero/laravel-localized-routes/src/Macros/IsLocalizedMacro.php',
+        'CodeZero\\LocalizedRoutes\\Macros\\LocalizedRoutesMacro' => __DIR__ . '/..' . '/codezero/laravel-localized-routes/src/Macros/LocalizedRoutesMacro.php',
+        'CodeZero\\LocalizedRoutes\\Macros\\LocalizedUrlMacro' => __DIR__ . '/..' . '/codezero/laravel-localized-routes/src/Macros/LocalizedUrlMacro.php',
+        'CodeZero\\LocalizedRoutes\\Macros\\UriTranslationMacro' => __DIR__ . '/..' . '/codezero/laravel-localized-routes/src/Macros/UriTranslationMacro.php',
+        'CodeZero\\LocalizedRoutes\\Middleware\\SetLocale' => __DIR__ . '/..' . '/codezero/laravel-localized-routes/src/Middleware/SetLocale.php',
+        'CodeZero\\LocalizedRoutes\\ProvidesRouteParameters' => __DIR__ . '/..' . '/codezero/laravel-localized-routes/src/ProvidesRouteParameters.php',
+        'CodeZero\\LocalizedRoutes\\UrlBuilder' => __DIR__ . '/..' . '/codezero/laravel-localized-routes/src/UrlBuilder.php',
+        'CodeZero\\LocalizedRoutes\\UrlGenerator' => __DIR__ . '/..' . '/codezero/laravel-localized-routes/src/UrlGenerator.php',
+        'CodeZero\\Localizer\\Detectors\\AppDetector' => __DIR__ . '/..' . '/codezero/laravel-localizer/src/Detectors/AppDetector.php',
+        'CodeZero\\Localizer\\Detectors\\BrowserDetector' => __DIR__ . '/..' . '/codezero/laravel-localizer/src/Detectors/BrowserDetector.php',
+        'CodeZero\\Localizer\\Detectors\\CookieDetector' => __DIR__ . '/..' . '/codezero/laravel-localizer/src/Detectors/CookieDetector.php',
+        'CodeZero\\Localizer\\Detectors\\Detector' => __DIR__ . '/..' . '/codezero/laravel-localizer/src/Detectors/Detector.php',
+        'CodeZero\\Localizer\\Detectors\\SessionDetector' => __DIR__ . '/..' . '/codezero/laravel-localizer/src/Detectors/SessionDetector.php',
+        'CodeZero\\Localizer\\Detectors\\UrlDetector' => __DIR__ . '/..' . '/codezero/laravel-localizer/src/Detectors/UrlDetector.php',
+        'CodeZero\\Localizer\\Localizer' => __DIR__ . '/..' . '/codezero/laravel-localizer/src/Localizer.php',
+        'CodeZero\\Localizer\\LocalizerServiceProvider' => __DIR__ . '/..' . '/codezero/laravel-localizer/src/LocalizerServiceProvider.php',
+        'CodeZero\\Localizer\\Middleware\\SetLocale' => __DIR__ . '/..' . '/codezero/laravel-localizer/src/Middleware/SetLocale.php',
+        'CodeZero\\Localizer\\Stores\\AppStore' => __DIR__ . '/..' . '/codezero/laravel-localizer/src/Stores/AppStore.php',
+        'CodeZero\\Localizer\\Stores\\CookieStore' => __DIR__ . '/..' . '/codezero/laravel-localizer/src/Stores/CookieStore.php',
+        'CodeZero\\Localizer\\Stores\\SessionStore' => __DIR__ . '/..' . '/codezero/laravel-localizer/src/Stores/SessionStore.php',
+        'CodeZero\\Localizer\\Stores\\Store' => __DIR__ . '/..' . '/codezero/laravel-localizer/src/Stores/Store.php',
+        'ComposerIncludeFiles\\Composer\\AutoloadGenerator' => __DIR__ . '/..' . '/0.0.0/composer-include-files/src/Composer/AutoloadGenerator.php',
+        'ComposerIncludeFiles\\Plugin' => __DIR__ . '/..' . '/0.0.0/composer-include-files/src/Plugin.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',

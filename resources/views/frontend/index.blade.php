@@ -32,27 +32,27 @@ Best Mango seller in Bangladesh
                 <!-- Navbar links -->
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav ml-auto font-weight-bold">
-                        <li class="nav-item active"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('products.index') }}">Mangoes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('contact-us.index') }}">Contact Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('checkout') }}">Checkout</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('products.index') }}">{{ __('Mangoes') }}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('contact-us.index') }}">{{ __('Contact Us') }}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('checkout') }}">{{ __('Checkout') }}</a></li>
                     </ul>
                 </div>
             </nav>
             <!-- /Header -->
         </div>
         <div class="col-12 height-middle text-center pt-5 z-1">
-            <p class="text-white display-5">Sweet Mango</p>
-            <p class="text-white">We are determined to take the organic mango market to a higher level in Bangladesh. Quality, nutrition, and taste are the keys of our business.</p>
-            <a href="{{ route('products.index', 'category=langra') }}" title="bd mango" class="btn btn-light m-1 btn-lg">Langra</a> <a href="{{ route('products.index', 'category=aam-rupali') }}" title="Aam rupali" class="btn btn-success m-1 btn-lg">Aam Rupali</a> <a href="{{ route('products.index', 'category=himsagor') }}" title="Himsagor" class="btn btn-secondary m-1 btn-lg">Himsagor</a>
+            <p class="text-white display-5">{{ __('index.title') }}</p>
+            <p class="text-white">{{ __('index.slogan') }}</p>
+            <a href="{{ route('products.index', 'category=langra') }}" title="bd mango" class="btn btn-light m-1 btn-lg">{{ __('Langra') }}</a> <a href="{{ route('products.index', 'category=aam-rupali') }}" title="Aam rupali" class="btn btn-success m-1 btn-lg">{{ __('Aam Rupali') }}</a> <a href="{{ route('products.index', 'category=himsagor') }}" title="Himsagor" class="btn btn-secondary m-1 btn-lg">{{ __('Himsagor') }}</a>
         </div>
     </div>
 </header>
 <section class="container">
     <div class="row">
         <div class="col-12 @computer py-5 @endcomputer text-center">
-            <h1 class="text-dark @computer mt-5 @endcomputer">Formalin-free Mango in Bangladesh</h1>
-            <p class="text-secondary">We sell chemical-free mango in Bangladesh. Formalin-free mango is the key of our business. We collect mango from Chapainawabganj and Rajshahi but supply all over Bangladesh. Onbiponi believes in quality of service than it's quantity.</p>
+            <h1 class="text-dark @computer mt-5 @endcomputer">{{ __('index.slider_title') }}</h1>
+            <p class="text-secondary">{{ __('index.slider_slogan') }}</p>
             <div class="owl-carousel">
                 @foreach($products as $product)
                 <div>
@@ -85,8 +85,8 @@ Best Mango seller in Bangladesh
         <div class="col-0 col-sm-1 col-md-2"></div>
         <div class="col-12 col-sm-10 col-md-8 text-justify">
             <div class="bg-white-transparent @computer p-5 @else p-2 @endcomputer">
-                <h2 class="@computer mt-5 @endcomputer text-center">Our Promise <small class="text-success">to you</small></h2>
-                <p class="mb-5">Formalin-free Mango is the key of our business. We buy and cultivate mango in Chapainawabganj and Rajshahi and we sell mango all over bangladesh through courier service. We provide home delivery in dhaka. We emphasize on reputation than profit and customer's satisfaction is our prime concern. We are committed to take the organic fruit market to a higher level in Bangladesh. Quality, nutrition, taste and custemer satisfaction are the keys of our business. We are the best mango seller in Bangladesh.</p>
+                <h2 class="@computer mt-5 @endcomputer text-center">{{ __('Our Promise') }} <small class="text-success">{{ __('to you') }}</small></h2>
+                <p class="mb-5">{{ __('index.promise') }}</p>
             </div>
         </div>
     </div>
@@ -94,8 +94,8 @@ Best Mango seller in Bangladesh
 <section class="container">
     <div class="row">
         <div class="col-12 text-center mb-5">
-            <div class="display-5">Need more information?</div>
-            <a class="btn btn-light btn-lg border"  rel="canonical" href="{{ route('contact-us.index') }}" title="formalin-free Bangladeshi mango" >Contact Us</a>
+            <div class="display-5">{{ __('Need more information?') }}</div>
+            <a class="btn btn-light btn-lg border"  rel="canonical" href="{{ route('contact-us.index') }}" title="formalin-free Bangladeshi mango" >{{ __('Contact Us') }}</a>
         </div>
     </div>
 </section>

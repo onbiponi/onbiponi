@@ -1,41 +1,41 @@
     <footer class="bg-dark text-center p-2">
         <div class="row">
             <div class="col-12 col-sm-6 col-md-3">
-                <h5 class="text-light pt-3">Members Area</h5>
+                <h5 class="text-light pt-3">{{ __('Members Area') }}</h5>
                 <ul class="list-group list-group-flush">
                     @auth
-                    <li class="list-group-item bg-transparent"><a class="text-white" href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-                    <li class="list-group-item bg-transparent"><a class="text-white" href="{{ route('logout') }}" onclick="if (!window.__cfRLUnblockHandlers) return false; event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i> Logout</a></li>
+                    <li class="list-group-item bg-transparent"><a class="text-white" href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> {{ __('Dashboard') }}</a></li>
+                    <li class="list-group-item bg-transparent"><a class="text-white" href="{{ route('logout') }}" onclick="if (!window.__cfRLUnblockHandlers) return false; event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i> {{ __('Logout') }}</a></li>
                     @endauth
                     @guest
-                    <li class="list-group-item bg-transparent"><a class="text-white" href="{{ route('login') }}"><i class="fa fa-sign-in"></i> Login</a></li>
-                    <li class="list-group-item bg-transparent"><a class="text-white" href="{{ route('register') }}"><i class="fa fa-registered"></i> Register</a></li>
+                    <li class="list-group-item bg-transparent"><a class="text-white" href="{{ route('login') }}"><i class="fa fa-sign-in"></i> {{ __('Login') }}</a></li>
+                    <li class="list-group-item bg-transparent"><a class="text-white" href="{{ route('register') }}"><i class="fa fa-registered"></i> {{ __('Register') }}</a></li>
                     @endguest
                 </ul>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
-                <h5 class="text-light pt-3">More about <a href="{{ url('/') }}">{{ config('app.name') }}</a></h5>
+                <h5 class="text-light pt-3">{{ __('More about') }} <a href="{{ url('/') }}">{{ __(config('app.name')) }}</a></h5>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item bg-transparent"><a class="text-white" href="{{ route('contact-us.index') }}"><i class="fa fa-envelope"></i> Contact Us</a></li>
-                    <li class="list-group-item bg-transparent"><a class="text-white" href="{{ route('privacy-policy') }}"><i class="fa fa-lock"></i> Privacy Policy</a></li>
+                    <li class="list-group-item bg-transparent"><a class="text-white" href="{{ route('contact-us.index') }}"><i class="fa fa-envelope"></i> {{ __('Contact Us') }}</a></li>
+                    <li class="list-group-item bg-transparent"><a class="text-white" href="{{ route('privacy-policy') }}"><i class="fa fa-lock"></i> {{ __('Privacy Policy') }}</a></li>
                 </ul>
             </div>
             @computer
             <div class="col-12 col-sm-6 col-md-3">
-                <h5 class="text-light pt-3">Subscribe to <a href="{{ url('/') }}">{{ config('app.name') }}</a></h5>
+                <h5 class="text-light pt-3">{{ __('Subscribe to') }} <a href="{{ url('/') }}">{{ __(config('app.name')) }}</a></h5>
                 <form action="{{ route('subscriptions.store') }}" method="post">
                     <div class="input-group">
                             @csrf
                             <input type="email" name="email" class="form-control" placeholder="email@example.com">
                         
                         <div class="input-group-append">
-                            <button class="btn btn-success" type="submit">Go</button>
+                            <button class="btn btn-success" type="submit">{{ __('Go') }}</button>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
-                <h5 class="text-light pt-3">Find us on</h5>
+                <h5 class="text-light pt-3">{{ __('Find us on') }}</h5>
                 <div class="d-flex">
                     <ul class="list-group list-group-horizontal mx-auto">
                         <li class="list-group-item bg-transparent"><a class="text-white" href="https://facebook.com/onbiponi"><i class="fa fa-facebook"></i></a></li>
@@ -56,7 +56,7 @@
             @endcomputer
         </div>
         <div class="row bg-dark">
-            <div class="col-12 text-center text-secondary">Copyright &copy; {{ date("Y") }}. All rights reserved by <strong>{{ config('app.name') }}</strong></div>
+            <div class="col-12 text-center text-secondary">{{ __('Copyright') }} &copy; {{ date("Y") }}. {{ __('All rights reserved by') }} <strong>{{ __(config('app.name')) }}</strong></div>
         </div>
     </footer>
     <div class="img-thumbnail rounded-circle" id="cart"><a class="btn btn-link btn-sm" href="{{ route('cart') }}"><i class="fa fa-shopping-cart"><span class="product-number badge badge-warning text-success">@{{ totalProduct }}</span></i></a></div>
@@ -75,16 +75,16 @@
 			<div class="modal-content">
 				<!-- Modal Header -->
 				<div class="modal-header">
-					<h4 class="modal-title">Success</h4>
+					<h4 class="modal-title">{{ __('Success') }}</h4>
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<!-- Modal body -->
 				<div class="modal-body text-success">
-				Updated successfully
+				{{ __('Updated successfully') }}
 				</div>
 				<!-- Modal footer -->
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">{{ __('Ok') }}</button>
 				</div>
 			</div>
 		</div>
@@ -95,16 +95,16 @@
 			<div class="modal-content">
 				<!-- Modal Header -->
 				<div class="modal-header">
-					<h4 class="modal-title">Error</h4>
+					<h4 class="modal-title">{{ __('Error<') }}/h4>
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<!-- Modal body -->
 				<div class="modal-body text-danger">
-				Error! Update error. Please try again.
+				{{ __('Error! Update error. Please try again.') }}
 				</div>
 				<!-- Modal footer -->
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">{{ __('Ok') }}</button>
 				</div>
 			</div>
 		</div>

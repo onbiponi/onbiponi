@@ -44,6 +44,6 @@ return [
      *
      * This option only has effect if you use the SetLocale middleware.
      */
-    'use_localizer' => true,
+    'use_localizer' => false,
 
 ];

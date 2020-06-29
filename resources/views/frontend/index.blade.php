@@ -10,7 +10,12 @@ Best Mango seller in Bangladesh
                 @computer
                 <li class="list-group-item bg-transparent py-0"><i class="fa fa-envelope text-white"></i> <a rel="nofollow" class="text-white" href="mailto:contact-us@onbiponi.com">contact-us@onbiponi.com</a></li>
                 @endcomputer
-                <li class="list-group-item bg-transparent py-0 ml-auto" id="app"><a rel="nofollow" class="text-white" href="{{ route('chats.show', 1) }}"><i class="fa fa-comments text-light"></i>
+				@if(App::getLocale() == 'en')
+				<li class="list-group-item bg-transparent py-0"><a rel="nofollow" class="text-white btn btn-link" href="{{ url('/bn') }}/{!! Request::segment(1) !!}">Bangla</a></li>
+                @else
+				<li class="list-group-item bg-transparent py-0"><a rel="nofollow" class="text-white btn btn-link" href="{{ url('/') }}">English</a></li>
+				@endif
+				<li class="list-group-item bg-transparent py-0 ml-auto" id="app"><a rel="nofollow" class="text-white" href="{{ route('chats.show', 1) }}"><i class="fa fa-comments text-light"></i>
                     @auth
 						<chat-counter v-bind:user="{{ $user ?? '' }}" v-bind:partner="{{ $partner ?? '{}' }}" v-bind:total_unread_message="{{ $total_unread_message ?? 0 }}"></chat-counter>
 					@endauth

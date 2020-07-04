@@ -11,7 +11,7 @@
                 <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Categories</div>
                 <ul class="list-group category_block">
                     @foreach($categories as $category)
-                    <li class="list-group-item"><a href="{{ route('products.index') }}?category={{ urlencode($category->name) }}">{{ $category->name }}</a></li>
+                    <li class="list-group-item"><a href="{{ route('products.index') }}?category={{ $category->name }}">{{ $category->name }}</a></li>
                     @endforeach
                 </ul>
             </div>

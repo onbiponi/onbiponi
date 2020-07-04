@@ -12,8 +12,6 @@
 */
 Route::localized(function () {
 	Route::get('/', 'Frontend\HomeController@index')->name('index');
-
-
 	Route::get('/home', 'Frontend\HomeController@index')->name('home');
 
 	Auth::routes(['verify' => true]);
@@ -37,6 +35,8 @@ Route::localized(function () {
 	//Routes for dashboard
 	Route::group(['middleware' => ['auth', 'verified']], function () {
 		Route::resource('cashbooks', 'Backend\CashbookController');
+		Route::get('manage-blogs', 'Backend\BlogController@manageIndex')->name('manage-blogs.index')->middleware('moderator:Product');
+		Route::resource('manage-blogs', 'Backend\BlogController')->except(['index', 'show'])->middleware('moderator:Product');
 		Route::resource('categories', 'Backend\CategoryController')->middleware('moderator:Category');
 		Route::resource('chats', 'Backend\ChatController');
 		Route::get('checkout-login', 'Backend\OrderController@checkoutLogin')->name('checkout-login');
@@ -52,8 +52,8 @@ Route::localized(function () {
 		Route::resource('payments', 'Backend\PaymentController')->middleware('moderator:Payment');
 		Route::resource('permissions', 'Backend\PermissionController')->middleware('moderator:Permission');
 		Route::put('permissions-update', 'Backend\PermissionController@updateList')->name('permissions.update.list')->middleware('moderator:Permission');
-		Route::get('manage-products', 'Backend\ProductController@manageIndex')->name('manage-products.index')->middleware('moderator:Product');;
-		Route::resource('manage-products', 'Backend\ProductController')->except(['index', 'show'])->middleware('moderator:Product');;
+		Route::get('manage-products', 'Backend\ProductController@manageIndex')->name('manage-products.index')->middleware('moderator:Product');
+		Route::resource('manage-products', 'Backend\ProductController')->except(['index', 'show'])->middleware('moderator:Product');
 		Route::resource('regions', 'Locations\RegionController')->middleware('moderator:Location');
 		Route::resource('shippers', 'Backend\ShipperController')->middleware('moderator:Shipper');
 		Route::resource('sizes', 'Backend\SizeController')->middleware('moderator:Size');
@@ -62,6 +62,7 @@ Route::localized(function () {
 		Route::resource('users', 'Backend\UserController');
 	});
 	Route::resource('products', 'Backend\ProductController')->only(['index', 'show']);
+	Route::resource('blogs', 'Backend\BlogController')->only(['index', 'show']);
 	Route::post('subscriptions', 'Backend\ContactUsController@subscribe')->name('subscriptions.store');
 	Route::get('sitemap.xml', function() {
 		\Spatie\Sitemap\SitemapGenerator::create('https://onbiponi.com')->writeToFile('sitemap.xml');

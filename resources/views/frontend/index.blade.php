@@ -1,6 +1,6 @@
 @extends('layouts.index')
 @section('title')
-Best Mango seller in Bangladesh
+{{ __('index.page_title') }}
 @endsection
 @section('content')
 <header id=@mobile "home-mobile" @else "home" @endmobile">
@@ -11,7 +11,7 @@ Best Mango seller in Bangladesh
                 <li class="list-group-item bg-transparent py-0"><i class="fa fa-envelope text-white"></i> <a rel="nofollow" class="text-white" href="mailto:contact-us@onbiponi.com">contact-us@onbiponi.com</a></li>
                 @endcomputer
 				@if(App::getLocale() == 'en')
-				<li class="list-group-item bg-transparent py-0"><a rel="nofollow" class="text-white btn btn-link" href="{{ url('/bn') }}/{!! Request::segment(1) !!}">Bangla</a></li>
+				<li class="list-group-item bg-transparent py-0"><a rel="nofollow" class="text-white btn btn-link" href="{{ route('bn.index') }}">বাংলা</a></li>
                 @else
 				<li class="list-group-item bg-transparent py-0"><a rel="nofollow" class="text-white btn btn-link" href="{{ url('/') }}">English</a></li>
 				@endif
@@ -27,7 +27,7 @@ Best Mango seller in Bangladesh
         <div class="col-12 z-2">
             <nav class="navbar navbar-expand-md navbar-dark @computer pr-5 @else bg-dark @endcomputer" id="navbar">
                 <!-- Brand -->
-                <a class="navbar-brand m-0 p-0" href="{{ url('/') }}"><img src="{{ asset('assets/logo-white.png') }}" class="logo" alt="{{ config('app.name') }} Logo" /></a>
+                <a class="navbar-brand m-0 p-0" href="{{ route('index') }}"><img src="{{ asset('assets/logo-white.png') }}" class="logo" alt="{{ config('app.name') }} Logo" /></a>
                 
                 <!-- Toggler/collapsibe Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -37,7 +37,7 @@ Best Mango seller in Bangladesh
                 <!-- Navbar links -->
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav ml-auto font-weight-bold">
-                        <li class="nav-item active"><a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="{{ route('index') }}">{{ __('Home') }}</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('products.index') }}">{{ __('Mangoes') }}</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('contact-us.index') }}">{{ __('Contact Us') }}</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('checkout') }}">{{ __('Checkout') }}</a></li>
@@ -49,7 +49,7 @@ Best Mango seller in Bangladesh
         <div class="col-12 height-middle text-center pt-5 z-1">
             <p class="text-white display-5">{{ __('index.title') }}</p>
             <p class="text-white">{{ __('index.slogan') }}</p>
-            <a href="{{ route('products.index', 'category=langra') }}" title="bd mango" class="btn btn-light m-1 btn-lg">{{ __('Langra') }}</a> <a href="{{ route('products.index', 'category=aam-rupali') }}" title="Aam rupali" class="btn btn-success m-1 btn-lg">{{ __('Aam Rupali') }}</a> <a href="{{ route('products.index', 'category=himsagor') }}" title="Himsagor" class="btn btn-secondary m-1 btn-lg">{{ __('Himsagor') }}</a>
+            <a href="{{ route('products.index', 'category=langra') }}" title="bd mango" class="btn btn-light m-1 btn-lg">{{ __('Langra') }}</a> <a href="{{ route('products.index', 'category=Aam%20Rupali') }}" title="Aam rupali" class="btn btn-success m-1 btn-lg">{{ __('Aam Rupali') }}</a> <a href="{{ route('products.index', 'category=himsagor') }}" title="Himsagor" class="btn btn-secondary m-1 btn-lg">{{ __('Himsagor') }}</a>
         </div>
     </div>
 </header>

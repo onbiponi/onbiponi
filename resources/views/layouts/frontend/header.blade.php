@@ -4,11 +4,11 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="keywords" content='formalin-free mango dhaka bangladesh chemical-free bd online order Chapainawabganj Rajshahi onbiponi' />
-    <meta name="description" content='We sell chemical-free mango in Bangladesh. Formalin-free mango is the key of our business. We collect mango from Chapainawabganj and Rajshahi.' />
+	<meta name="keywords" content="{{ __('index.keywords') }}" />
+    <meta name="description" content="{{ __('index.description') }}" />
     <meta name='author' content='{{ config('app.name', 'Laravel') }}' />
     <meta name='copyright' content='{{ config('app.name', 'Laravel') }}' />
-    <meta name='summary' content='We sell chemical-free mango in Bangladesh. Formalin-free mango is the key of our business. We collect mango from Chapainawabganj and Rajshahi; We sell mango all over bangladesh through courier service and home delivery in Dhaka. We are the best mango seller in Dhaka.' />
+    <meta name='summary' content="{{ __('index.summary') }}" />
     <meta name='Classification' content='Company' />
     <meta name='designer' content='{{ config('app.name', 'Laravel') }}' />
     <meta name='reply-to' content='{{ config('app.name', 'Laravel') }}' />
@@ -21,12 +21,12 @@
     <!-- CSRF Token -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<!--base url for Script files -->
-	<meta name="base-url" content="{{ url('/') }}">
+	<meta name="base-url" content="{{ route('index') }}">
 	<!--Facebook Share-->
 	<meta property="og:url"           content="{{ Request::url() }}" />
 	<meta property="og:type"          content="product" />
-	<meta property="og:title"         content="Formalin-free mango" />
-	<meta property="og:description"   content="We are determined to take the organic mango market to a higher level in Bangladesh. Quality, nutrition, and taste are the keys of our business. We sell chemical-free mango in Bangladesh. Formalin-free mango is the key of our business. We take online order for mango in onbiponi. We sell formalin-free and sweet mango at a lower cost. You can check the price of mango in onbiponi and buy online. We sell varieties of mango including usual Langra (lengra), Himsagar and Fazli (Fajli), Aam Rupali etc." />
+	<meta property="og:title"         content="{{ __('Formalin-free mango') }}" />
+	<meta property="og:description"   content="{{ __('index.slogan') }} {{ __('index.promise') }}" />
 	@if(isset($product))
 	<meta property="og:image"         content="{{ url('/assets/products') }}/{{ $product->image1 ?? 'not-found.jpg' }}" />
 	@else

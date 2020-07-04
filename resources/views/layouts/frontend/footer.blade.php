@@ -1,4 +1,4 @@
-    <footer class="bg-dark text-center p-2">
+    <footer class="bg-dark text-center p-2 w-100">
         <div class="row">
             <div class="col-12 col-sm-6 col-md-3">
                 <h5 class="text-light pt-3">{{ __('Members Area') }}</h5>
@@ -14,7 +14,7 @@
                 </ul>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
-                <h5 class="text-light pt-3">{{ __('More about') }} <a href="{{ url('/') }}">{{ __(config('app.name')) }}</a></h5>
+                <h5 class="text-light pt-3">{{ __('More about') }} <a href="{{ route('index') }}">{{ __(config('app.name')) }}</a></h5>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item bg-transparent"><a class="text-white" href="{{ route('contact-us.index') }}"><i class="fa fa-envelope"></i> {{ __('Contact Us') }}</a></li>
                     <li class="list-group-item bg-transparent"><a class="text-white" href="{{ route('privacy-policy') }}"><i class="fa fa-lock"></i> {{ __('Privacy Policy') }}</a></li>
@@ -22,7 +22,7 @@
             </div>
             @computer
             <div class="col-12 col-sm-6 col-md-3">
-                <h5 class="text-light pt-3">{{ __('Subscribe to') }} <a href="{{ url('/') }}">{{ __(config('app.name')) }}</a></h5>
+                <h5 class="text-light pt-3">{{ __('Subscribe to') }} <a href="{{ route('index') }}">{{ __(config('app.name')) }}</a></h5>
                 <form action="{{ route('subscriptions.store') }}" method="post">
                     <div class="input-group">
                             @csrf

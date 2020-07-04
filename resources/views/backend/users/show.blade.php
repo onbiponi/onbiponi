@@ -41,8 +41,8 @@
 								<ul class="nav nav-tabs">
 									<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#profile">Profile</a></li>
 									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#address">Address</a></li>
-									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#billing">Billing Address</a></li>
-									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#shipping">Shipping Address</a></li>
+									<!--<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#billing">Billing Address</a></li>
+									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#shipping">Shipping Address</a></li>-->
 								</ul>
 								<div class="tab-content mt-3">
 									<div class="tab-pane active" id="profile">

@@ -110,7 +110,10 @@
 		</div>
 	</div>
 	<!-- Scripts -->
-	<script src="{{ asset('js/app.js') }}"></script>
+	<script src="{{ asset('js/app.js') }}?{{ time() }}"></script>
+	<script src="{{ asset('js/theme.js') }}"></script>
+	<script src="{{ asset('js/smooth-scroll.js') }}"></script>
+	<script src="{{ asset('js/script.js') }}"></script>
 	@yield('script')
 </body>
 </html>
